@@ -1,7 +1,6 @@
 # 🤖 Quasivo AI Screening App
 
 [![Build](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/govardhan2022/quasivo-m_AI-screening_app) 
-[![License](https://img.shields.io/github/license/govardhan2022/quasivo-m_AI-screening_app)](LICENSE) 
 [![Python](https://img.shields.io/badge/python-3.9+-blue)](https://www.python.org/) 
 [![Streamlit](https://img.shields.io/badge/framework-streamlit-orange)](https://streamlit.io) 
 
@@ -104,5 +103,3 @@ Create your feature branch (git checkout -b feature/new-feature)
 Commit your changes (git commit -m "Add new feature")
 Push to the branch (git push origin feature/new-feature)
 Open a Pull Request
-## 📄 License
-This project is licensed under the MIT License – see the LICENSE file for details.
