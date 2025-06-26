@@ -1,65 +1,7 @@
-🌟 Features
-✅ Upload PDF resumes and job descriptions
-💬 Generate 3 custom interview questions
-🎯 Get AI-generated scores + explanations
-💾 Save results locally as JSON files
-🔐 Static login for reviewer authentication (bonus)
-🗣️ Voice input support (bonus)
-📁 External Gemini prompt templates in /prompts/ (submission requirement)
-🖥️ Runs entirely locally – no cloud storage or deployment needed
-
-
-📂 data/ – Local Results Storage
-All completed screenings are saved here as timestamped JSON files like:
-
-
-
-1
-screening_20250428_143045.json
-Each file contains:
-
-Job Description
-Candidate Resume
-Interview Questions
-Candidate Answers
-Scores & Explanations
-Timestamp
-📂 prompts/ – Gemini Prompt Templates
-Contains prompt strings used with the Gemini API:
-
-generate_questions.txt: For generating interview questions
-score_answer.txt: For scoring answers
-🛠️ Technologies Used
-TECHNOLOGY
-PURPOSE
-Streamlit
-Web interface framework
-Google Gemini API
-Generate questions & score answers
-PyPDF2
-Extract text from uploaded résumés
-SpeechRecognition
-Voice-to-text input for answering questions
-Python-dotenv
-Secure handling of API keys
-JSON
-Local storage format for results
-
-🤝 Contributing
-Contributions are welcome! If you'd like to improve this project, please follow these steps:
-
-Fork the repo
-Create your feature branch (git checkout -b feature/new-feature)
-Commit your changes (git commit -m "Add new feature")
-Push to the branch (git push origin feature/new-feature)
-Open a Pull Request
-📄 License
-This project is licensed under the MIT License – see the LICENSE file for details.
-
 # 🤖 Quasivo AI Screening App
 
-[![Build](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/yourusername/quasivo-ai-screening) 
-[![License](https://img.shields.io/github/license/yourusername/quasivo-ai-screening)](LICENSE) 
+[![Build](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/govardhan2022/quasivo-m_AI-screening_app) 
+[![License](https://img.shields.io/github/license/govardhan2022/quasivo-m_AI-screening_app)](LICENSE) 
 [![Python](https://img.shields.io/badge/python-3.9+-blue)](https://www.python.org/) 
 [![Streamlit](https://img.shields.io/badge/framework-streamlit-orange)](https://streamlit.io) 
 
@@ -95,7 +37,11 @@ Perfect for recruiters, HR teams, and technical leads who want to streamline the
 - 💬 Generate 3 custom interview questions
 - 🎯 Get AI-generated scores + explanations
 - 💾 Save results locally as JSON files
-- 🌐 Built with Streamlit — fast, responsive UI
+- 🔐 Static login for reviewer authentication (bonus)
+- 🗣️ Voice input support (bonus)
+- 📁 External Gemini prompt templates in /prompts/ (submission requirement)
+- 🖥️ Runs entirely locally – no cloud storage or deployment needed
+
 
 ---
 
@@ -115,5 +61,48 @@ Before running the app, ensure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/quasivo-ai-screening.git 
-   cd quasivo-ai-screening
+   git clone https://github.com/govardhan2022/quasivo-basic-AI_screening 
+   cd qquasivo-basic-AI_screening
+
+2. **Install dependencie**
+   ```bash
+   pip install -r requirements.txt
+
+4. **Set up your Gemini API key**
+ - to .env, add your API key:
+ - 🔐 Add .env to your .gitignore to prevent exposing your API key.
+   ```bash
+     GEMINI_API_KEY="your_api_key_here"
+
+4. **Run the app**
+   ```bash
+   streamlit run app.py
+
+## 🗂️ Folder Structure
+
+    quasivo-ai-screening/
+    │
+    ├── app.py                     # Main application code
+    ├── requirements.txt           # List of required Python packages
+    ├── .env                       # Template for environment variables
+    ├── .gitignore                 # Files to ignore in Git
+    ├── README.md                  # This file
+    │
+    ├── prompts/                   # Prompt templates for Gemini
+    │   ├── generate_questions_prompt.txt
+    │   └── score_answer_prompt.txt
+    │
+    └── data/                      # Saved screening results (JSON format)
+        └── screening_YYYYMMDD_HHMMSS.json
+
+
+## 🤝 Contributing
+Contributions are welcome! If you'd like to improve this project, please follow these steps:
+
+Fork the repo
+Create your feature branch (git checkout -b feature/new-feature)
+Commit your changes (git commit -m "Add new feature")
+Push to the branch (git push origin feature/new-feature)
+Open a Pull Request
+## 📄 License
+This project is licensed under the MIT License – see the LICENSE file for details.
